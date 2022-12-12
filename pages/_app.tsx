@@ -1,6 +1,22 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { EmptyLayout } from '@/components/layouts'
+import { AppPropsWithLayout } from '@/models/common'
+import { SWRConfig } from 'swr'
+import axiosClient from '@/api/axios-client'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const App = ({ Component, pageProps }: AppPropsWithLayout) => {
+
+  const Layout = Component.Layout ?? EmptyLayout
+
+  return (
+    <SWRConfig value={{
+      fetcher: (url) => axiosClient.get(url), shouldRetryOnError: false
+    }}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </SWRConfig>
+  )
 }
+
+export default App
