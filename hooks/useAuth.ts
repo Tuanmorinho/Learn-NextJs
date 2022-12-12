@@ -28,7 +28,7 @@ export function useAuth(options?: Partial<PublicConfiguration>) {
 
 	async function logout() {
 		await authApi.logout();
-		mutate({}, false);
+		mutate(null, false);
 	}
 
 	return {
