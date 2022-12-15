@@ -1,7 +1,6 @@
+import { Auth } from '@/components/auth';
 import { IlayoutProps } from '@/models/common';
 import Link from 'next/link';
-import React from 'react';
-import { Auth } from '../common';
 
 export function AdminLayout(props: IlayoutProps) {
 	const { children } = props

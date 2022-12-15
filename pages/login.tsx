@@ -1,9 +1,8 @@
-import { authApi } from 'api-client'
+import { NextPageWithLayout } from '@/models/common'
 import { useAuth } from 'hooks'
 import { useRouter } from 'next/router'
-import React from 'react'
 
-const LoginPage = () => {
+const LoginPage: NextPageWithLayout = () => {
 
     const router = useRouter()
     const { profile, login, logout } = useAuth({

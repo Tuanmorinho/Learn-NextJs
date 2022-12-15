@@ -1,25 +1,31 @@
 import { IlayoutProps } from '@/models/common';
-import Link from 'next/link';
-import React, { useEffect } from 'react';
+import { Box, Stack, Container } from '@mui/material';
+import { Footer, Header } from '../common';
 
 export function MainLayout(props: IlayoutProps) {
-    const { children } = props
 
-	useEffect(() => {
-		console.log('mouting');
-		return () => console.log('unmouting');
-		
-	}, [])
-	
-    
+	const { children } = props;
+
 	return (
-		<div>
-			<h1>Main Layout</h1>
-			<Link href="/">Home</Link>
-			<Link href="/about">About</Link>
-			<div>
-                { children }
-            </div>
-		</div>
+		<Stack minHeight='100vh'>
+			<Header />
+
+			<Container maxWidth='sm' sx={{ bgcolor: 'primary.main' }}>
+				SM CONTAINER
+			</Container>
+
+			<Container sx={{ bgcolor: 'primary.main' }}>
+				MD CONTAINER
+			</Container>
+
+			<Container maxWidth='lg' sx={{ bgcolor: 'primary.main' }}>
+				LG CONTAINER
+			</Container>
+
+			<Box component='main' flexGrow='1'>
+				{children}
+			</Box>
+			<Footer />
+		</Stack>
 	);
 }

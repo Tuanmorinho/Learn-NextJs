@@ -1,6 +1,6 @@
-import { useAuth } from 'hooks';
+import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 export interface IAuthProps {
     children: any
