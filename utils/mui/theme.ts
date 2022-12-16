@@ -14,13 +14,15 @@ export const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#556cd6',
+      main: '#D8C3A5',
+      light: '#EAE7DC'
     },
     secondary: {
-      main: '#19857b',
+      main: '#8E8D8A',
     },
     error: {
       main: red.A400,
+      light: '#E98074'
     },
   },
   typography: {
@@ -45,6 +47,16 @@ export const theme = createTheme({
           '@media (min-width: 900px)': {
             maxWidth: '860px'
           }
+        }
+      }
+    },
+    MuiLink: {
+      defaultProps: {
+        underline: 'none'
+      },
+      styleOverrides: {
+        root: {
+          color: 'black'
         }
       }
     }

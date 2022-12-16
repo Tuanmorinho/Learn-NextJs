@@ -1,27 +1,37 @@
-import { Box, Container, Stack } from "@mui/material";
+import { Box, Container, Stack, Link as MuiLink } from "@mui/material";
+import Link from "next/link";
 
-export interface IHeaderDesktopProps {}
+export interface IHeaderDesktopProps {
+    // isMobile: boolean
+}
 
 export function HeaderDesktop(props: IHeaderDesktopProps) {
-  return (
-    <Box sx={{ bgcolor: 'secondary.main' }}>
-        <Container maxWidth='lg'>
+
+    // const router = useRouter()
+
+    return (
+        <Box sx={{ bgcolor: 'white' }}>
             <Stack direction='column' justifyContent='center' alignItems='center' width='100%' height='100%'>
-                <Stack direction='row' justifyContent='space-between' alignItems='center' width='100%'>
-                    <div>Logo</div>
-                    <Stack direction='row' justifyContent='flex-end' alignItems='center' display={{ xs: 'none', md: 'flex' }} flexGrow='1' className="p-5">
-                        <Box>Trang chủ</Box>
-                        <Box>Tin bài</Box>
-                        <Box>Đơn hàng</Box>
+                <Container maxWidth='lg'>        
+                    <Stack sx={{ bgcolor: 'white' }} direction='row' width='100%'>
+                        <div>Logo</div>
+                        <div>Tìm kiếm</div>
+                        <button>Đăng nhập</button>
                     </Stack>
-                    <button>Thông báo</button>
-                </Stack>
-                <Stack direction='row' width='100%'>
-                    <div>Tìm kiếm</div>
-                    <button>Đăng nhập</button>
-                </Stack>
+                </Container>
+                <Box sx={{ bgcolor: 'primary.main' }} width='100%'>
+                    <Container maxWidth='lg'>
+                        <Stack direction='row' justifyContent='space-between' alignItems='center' width='100%'>
+                            <Stack direction='row' justifyContent='flex-end' alignItems='center' display={{ xs: 'none', md: 'flex' }} flexGrow='1' className="p-5">
+                                <Link href='/' passHref legacyBehavior><MuiLink>Trang chủ</MuiLink></Link>
+                                <Link href='/' passHref legacyBehavior><MuiLink>Tin bài</MuiLink></Link>
+                                <Link href='/' passHref legacyBehavior><MuiLink>Đơn hàng</MuiLink></Link>
+                            </Stack>
+                            <button>Thông báo</button>
+                        </Stack>
+                    </Container>
+                </Box>
             </Stack>
-        </Container>
-    </Box>
-  );
+        </Box>
+    );
 }
