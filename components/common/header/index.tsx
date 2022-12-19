@@ -13,14 +13,14 @@ export function Header() {
 			<Paper
 				sx={{ position: 'fixed', right: 0, left: 0 }}
 				className={clsx(isMobile ? 'bottom-0' : 'top-0')}
-				elevation={3}
+				elevation={2}
 			>
 				{isMobile ? <HeaderMobile /> : <HeaderDesktop isMobile={isMobile} />}
 			</Paper>
 			<Paper
 				sx={{ position: 'fixed', right: 0, left: 0 }}
 				className={clsx(isMobile && 'top-0')}
-				elevation={3}
+				elevation={2}
 			>
 				{isMobile && <HeaderDesktop isMobile={isMobile} />}
 			</Paper>

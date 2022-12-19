@@ -1,6 +1,6 @@
+import { AdminLayout } from '@/components/layouts';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 import Link from 'next/link';
-import React from 'react';
 
 export interface IPostListPageProps {
 	posts: any[];
@@ -31,5 +31,7 @@ export const getStaticProps: GetStaticProps<IPostListPageProps> = async (context
         }
     }
 };
+
+PostListPage.Layout = AdminLayout
 
 export default PostListPage

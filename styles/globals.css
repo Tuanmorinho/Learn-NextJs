@@ -28,3 +28,24 @@ a {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dropdown {
+  position: absolute;
+  right: auto;
+  left: 0;
+  z-index: 9998;
+  min-width: 10rem;
+  list-style: none;
+  background-color: transparent;
+  display: none;
+}
+
+.dropdown.show {
+  display: block;
+}
+
+.dropdown .dropdown-submenu {
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}

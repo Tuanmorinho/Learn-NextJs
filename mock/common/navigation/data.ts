@@ -24,6 +24,15 @@ export const ROUTE_LIST_DESKTOP: INavigation[] = [
                 type: 'basic',
                 title: 'Đơn nhận',
                 path: '/order/receipt',
+                children: [
+                    {
+                        id: 'order-receipt-test',
+                        type: 'basic',
+                        title: 'Test',
+                        icon: 'SwipeDownAltRoundedIcon',
+                        path: '/order/receipt/test',
+                    },
+                ]
             },
             {
                 id: 'shipment',
@@ -71,18 +80,27 @@ export const ROUTE_LIST_MOBILE: INavigation[] = [
         path: '/order',
         children: [
             {
-                id: 'receipt',
+                id: 'order-receipt',
                 type: 'basic',
                 title: 'Đơn nhận',
                 icon: 'SwipeDownAltRoundedIcon',
                 path: '/order/receipt',
             },
             {
-                id: 'shipment',
+                id: 'order-shipment',
                 type: 'basic',
                 title: 'Đơn gửi',
                 icon: 'SwipeUpAltRoundedIcon',
                 path: '/order/shipment',
+                children: [
+                    {
+                        id: 'order-shipment-test',
+                        type: 'basic',
+                        title: 'Test',
+                        icon: 'SwipeDownAltRoundedIcon',
+                        path: '/order/shipment/test',
+                    },
+                ]
             }
         ]
     },
