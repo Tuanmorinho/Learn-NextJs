@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 
 const Home: NextPageWithLayout = () => {
 	return (
-		<Box>Home Page</Box>
+		<Box sx={{ bgcolor: 'secondary.light' }} height='100vh'>Home Page</Box>
 	);
 }
 

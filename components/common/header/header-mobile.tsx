@@ -1,9 +1,11 @@
-import { Box } from "@mui/material";
+import { Container, Box } from '@mui/material';
 
 export interface IHeaderMobileProps {}
 
 export function HeaderMobile(props: IHeaderMobileProps) {
-  return (
-    <Box display={{ xs: 'block', md: 'none' }}>Header Mobile</Box>
-  );
+	return (
+		<Container maxWidth="lg">
+			<Box display={{ xs: 'block', md: 'none' }}>Header Mobile</Box>
+		</Container>
+	);
 }
