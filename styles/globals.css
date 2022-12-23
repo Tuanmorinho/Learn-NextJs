@@ -31,10 +31,9 @@ a {
 
 .dropdown {
   position: absolute;
-  right: auto;
-  left: 0;
-  z-index: 9998;
-  min-width: 10rem;
+  right: 0;
+  left: auto;
+  z-index: 9999;
   list-style: none;
   background-color: transparent;
   display: none;
@@ -46,6 +45,6 @@ a {
 
 .dropdown .dropdown-submenu {
   position: absolute;
-  left: 100%;
-  top: -7px;
+  right: 100%;
+  top: 0;
 }

@@ -56,12 +56,16 @@ export const theme = createTheme({
       },
       styleOverrides: {
         root: {
-          color: 'black',
+          color: 'white',
           cursor: 'pointer',
+          background: 'transparent',
+          // '&:hover': {
+          //   background: '#c2af94'
+          // },
 
-          '&:hover': {
-            background: '#E98074'
-          }
+          // '&.active': {
+          //   background: '#ac9c84'
+          // }
         }
       }
     }

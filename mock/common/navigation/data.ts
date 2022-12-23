@@ -31,6 +31,24 @@ export const ROUTE_LIST_DESKTOP: INavigation[] = [
                         title: 'Test',
                         icon: 'SwipeDownAltRoundedIcon',
                         path: '/order/receipt/test',
+                        children: [
+                            {
+                                id: 'order-receipt-test-test-2',
+                                type: 'basic',
+                                title: 'Test 2',
+                                icon: 'SwipeDownAltRoundedIcon',
+                                path: '/order/receipt/test/test2',
+                                children: [
+                                    {
+                                        id: 'order-receipt-test-test-2-test-3',
+                                        type: 'basic',
+                                        title: 'Test 3',
+                                        icon: 'SwipeDownAltRoundedIcon',
+                                        path: '/order/receipt/test/test2/test3',
+                                    },
+                                ]
+                            },
+                        ]
                     },
                 ]
             },
@@ -44,7 +62,7 @@ export const ROUTE_LIST_DESKTOP: INavigation[] = [
     },
     {
         id: 'other',
-        title: 'Thêm',
+        title: 'Xem thêm',
         type: 'basic',
         path: '/other'
     },
@@ -106,7 +124,7 @@ export const ROUTE_LIST_MOBILE: INavigation[] = [
     },
     {
         id: 'other',
-        title: 'Thêm',
+        title: 'Xem thêm',
         type: 'basic',
         icon: 'MoreHorizRoundedIcon',
         path: '/other'
